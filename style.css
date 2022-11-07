@@ -1,0 +1,100 @@
+body{
+  margin: 0;
+  display: grid;
+  grid-template: 2fr /auto;
+  row-gap: 20px;
+  place-content: center;
+  background-color: rgb(132, 165, 132);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: rgb(231, 214, 184) ;
+}
+
+main{
+  margin: 0px;
+}
+ 
+.container{
+  /* display:grid; */
+  object-fit: contain; /* sizes the container to maintain the videos aspect ratio */
+  position: relative;
+
+  /* grid-template-rows: 4% 9% 2% 7% 1% 1% 2% 4% 3% 6% 2% 2% 7% 6% 33% 6% ; 
+
+   grid-template-columns:14% 7% 11% 7% 7% 3% 2% 7% 3% 7% 13% 2% 7%; */
+
+  place-content: center;
+  margin: 20px;
+
+}
+
+.container > .drums {
+  width: 100%; /* making sure that the video doesnt overflow the viewport (horizontally) */
+  z-index: 1;
+}
+
+img{
+  border-radius: 20px;
+}
+.grid-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  z-index: 2;
+
+}
+
+
+#green{
+  background-color: rgb(193, 238, 193);
+  border-radius: 20px;
+  opacity:0.6;
+  cursor: pointer;
+}
+.ride{
+  grid-area: 2/4/3/8;
+}
+
+
+.crash{
+    grid-area: 2/11/3/14;
+  }
+
+.floorTop{
+    grid-area: 6/4/10/7;
+  }
+
+.floorLow{
+  grid-area: 5/6/7/9;
+}
+
+.floorRest{
+  grid-area: 5/9/7/11;
+}
+
+.midTop{
+  grid-area: 6/11/8/13;
+}
+
+.midLow{
+  grid-area: 4/12/5/15;
+} 
+
+.bass{
+  grid-area: 9/7/14/11;
+} 
+
+
+
+/* @media only screen and (max-width: 690px) {
+  .container .drums {
+    max-width: max-content;
+    height: auto;
+  }
+} */
+
